@@ -161,12 +161,12 @@ function M.apply()
 	vim.api.nvim_set_hl(0, "cssBraces", {})
 
 	-- Apply plugin theming
-	pcall(require, "all-hallows-eve.treesitter")
-	pcall(require, "all-hallows-eve.lualine")
-	pcall(require, "all-hallows-eve.snacks")
-	pcall(require, "all-hallows-eve.todo-comments")
-	pcall(require, "all-hallows-eve.noice")
-	pcall(require, "all-hallows-eve.neotree")
+	pcall(function() require("all-hallows-eve.treesitter").apply() end)
+	pcall(function() require("all-hallows-eve.lualine").apply() end)
+	pcall(function() require("all-hallows-eve.snacks").apply() end)
+	pcall(function() require("all-hallows-eve.todo-comments").apply() end)
+	pcall(function() require("all-hallows-eve.noice").apply() end)
+	pcall(function() require("all-hallows-eve.neotree").apply() end)
 end
 
 return M
