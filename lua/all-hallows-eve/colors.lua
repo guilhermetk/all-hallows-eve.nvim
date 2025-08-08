@@ -56,8 +56,10 @@ function M.apply()
 	vim.o.background = "dark"
 	vim.g.colors_name = "all-hallows-eve"
 
-	-- Core UI highlights (improved blending)
-	vim.api.nvim_set_hl(0, "Normal", { fg = p.fg1, bg = p.bg1 })
+	-- Ensure pure black background
+	vim.cmd("highlight clear Normal")
+	vim.api.nvim_set_hl(0, "Normal", { fg = p.fg1, bg = p.bg0 })
+	vim.api.nvim_set_hl(0, "NormalNC", { fg = p.fg1, bg = p.bg0 })
 	vim.api.nvim_set_hl(0, "NormalFloat", { fg = p.fg1, bg = p.bg4 })
 	vim.api.nvim_set_hl(0, "FloatBorder", { fg = p.border_fg, bg = p.bg4 })
 	vim.api.nvim_set_hl(0, "Cursor", { bg = p.cursor_bg })
@@ -92,7 +94,12 @@ function M.apply()
 	vim.api.nvim_set_hl(0, "MoreMsg", { fg = p.green })
 	vim.api.nvim_set_hl(0, "ModeMsg", { fg = p.fg2 })
 	vim.api.nvim_set_hl(0, "CmdLine", { fg = p.fg1, bg = p.bg1 })
-	vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = p.bg1, bg = p.bg1 })
+	vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = p.bg0, bg = p.bg0 })
+	
+	-- Ensure terminal colors don't override
+	if vim.fn.has("termguicolors") == 1 then
+		vim.o.termguicolors = true
+	end
 
 	-- Basic syntax highlighting (matching Vim theme)
 	vim.api.nvim_set_hl(0, "Boolean", { fg = p.constant })
