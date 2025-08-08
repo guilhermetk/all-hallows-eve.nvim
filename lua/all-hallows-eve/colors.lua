@@ -104,7 +104,7 @@ function M.apply()
 	-- Language-specific highlights from Vim theme
 	-- Ruby
 	vim.api.nvim_set_hl(0, "rubyClass", { fg = p.keyword })
-	vim.api.nvim_set_hl(0, "rubyFunction", {})
+	vim.api.nvim_set_hl(0, "rubyFunction", { fg = p.red })
 	vim.api.nvim_set_hl(0, "rubyInterpolationDelimiter", {})
 	vim.api.nvim_set_hl(0, "rubySymbol", { fg = p.constant })
 	vim.api.nvim_set_hl(0, "rubyConstant", {})
@@ -130,7 +130,7 @@ function M.apply()
 	-- ERB
 	vim.api.nvim_set_hl(0, "erubyDelimiter", {})
 	vim.api.nvim_set_hl(0, "erubyComment", { fg = p.comment })
-	vim.api.nvim_set_hl(0, "erubyRailsMethod", { fg = p.rails_method })
+	vim.api.nvim_set_hl(0, "erubyRailsMethod", { fg = p.red })
 
 	-- HTML
 	vim.api.nvim_set_hl(0, "htmlTag", {})
@@ -140,8 +140,8 @@ function M.apply()
 	vim.api.nvim_set_hl(0, "htmlSpecialChar", { fg = p.constant })
 
 	-- JavaScript
-	vim.api.nvim_set_hl(0, "javaScriptFunction", {})
-	vim.api.nvim_set_hl(0, "javaScriptRailsFunction", { fg = p.rails_method })
+	vim.api.nvim_set_hl(0, "javaScriptFunction", { fg = p.red })
+	vim.api.nvim_set_hl(0, "javaScriptRailsFunction", { fg = p.red })
 	vim.api.nvim_set_hl(0, "javaScriptBraces", {})
 
 	-- YAML
@@ -152,7 +152,7 @@ function M.apply()
 
 	-- CSS
 	vim.api.nvim_set_hl(0, "cssURL", {})
-	vim.api.nvim_set_hl(0, "cssFunctionName", { fg = p.rails_method })
+	vim.api.nvim_set_hl(0, "cssFunctionName", { fg = p.red })
 	vim.api.nvim_set_hl(0, "cssColor", { fg = p.constant })
 	vim.api.nvim_set_hl(0, "cssPseudoClassId", {})
 	vim.api.nvim_set_hl(0, "cssClassName", {})
