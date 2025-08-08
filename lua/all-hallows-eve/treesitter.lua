@@ -43,12 +43,8 @@ function M.apply()
   vim.api.nvim_set_hl(0, "@function.call", { fg = p.red })
   vim.api.nvim_set_hl(0, "@function.macro", { fg = p.red })
   vim.api.nvim_set_hl(0, "@method", { fg = p.fg1 })
-  vim.api.nvim_set_hl(0, "@method.call", { fg = p.red })
+  vim.api.nvim_set_hl(0, "@method.call", { fg = p.orange })
   vim.api.nvim_set_hl(0, "@constructor", { fg = p.fg1 })
-  
-  -- LSP semantic highlighting for function calls
-  vim.api.nvim_set_hl(0, "@lsp.type.function.call", { fg = p.red })
-  vim.api.nvim_set_hl(0, "@lsp.type.method.call", { fg = p.red })
 
   -- Variables
   vim.api.nvim_set_hl(0, "@variable", { fg = p.fg1 })
