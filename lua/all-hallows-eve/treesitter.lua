@@ -38,12 +38,12 @@ function M.apply()
   vim.api.nvim_set_hl(0, "@boolean", { fg = p.constant })
 
   -- Functions
-  vim.api.nvim_set_hl(0, "@function", { fg = p.fg1 })
+  vim.api.nvim_set_hl(0, "@function", { fg = p.red })
   vim.api.nvim_set_hl(0, "@function.builtin", { fg = p.red })
-  vim.api.nvim_set_hl(0, "@function.call", { fg = p.fg1 })
+  vim.api.nvim_set_hl(0, "@function.call", { fg = p.red })
   vim.api.nvim_set_hl(0, "@function.macro", { fg = p.red })
-  vim.api.nvim_set_hl(0, "@method", { fg = p.fg1 })
-  vim.api.nvim_set_hl(0, "@method.call", { fg = p.fg1 })
+  vim.api.nvim_set_hl(0, "@method", { fg = p.red })
+  vim.api.nvim_set_hl(0, "@method.call", { fg = p.red })
   vim.api.nvim_set_hl(0, "@constructor", { fg = p.fg1 })
 
   -- Variables
