@@ -7,12 +7,12 @@ M.palette = {
 	bg2 = "#191919", -- CursorLine/CursorColumn background
 	bg3 = "#0d0d0d", -- NonText background
 	bg4 = "#404040", -- SpecialKey/NonText foreground
-	
+
 	fg0 = "#ffffff", -- Pure white
 	fg1 = "#ffffff", -- Main foreground
 	fg2 = "#ffffff", -- Secondary foreground
 	fg3 = "#808080", -- LineNr foreground
-	
+
 	-- UI colors
 	cursor_bg = "#ffffff", -- Cursor background
 	visual_bg = "#644d6e", -- Visual selection background
@@ -20,7 +20,7 @@ M.palette = {
 	split_fg = "#4a4a4a", -- VertSplit color
 	status_bg = "#4a4a4a", -- StatusLine background
 	pmenu_sel_bg = "#644d6e", -- PmenuSel background
-	
+
 	-- Syntax colors
 	comment = "#9933cc", -- Comment purple
 	keyword = "#cc7833", -- Keywords/operators/statements (orange)
@@ -28,15 +28,15 @@ M.palette = {
 	constant = "#3387cc", -- Constants/numbers/booleans (blue)
 	regexp = "#cccc33", -- Regular expressions (yellow)
 	rails_method = "#c83730", -- Rails methods (red)
-	
+
 	-- Semantic colors
 	red = "#c83730",
-	orange = "#cc7833", 
+	orange = "#cc7833",
 	yellow = "#cccc33",
 	green = "#66cc33",
 	blue = "#3387cc",
 	purple = "#9933cc",
-	
+
 	-- Additional grays
 	gray = "#4a4a4a",
 	gray1 = "#808080",
@@ -122,10 +122,10 @@ function M.apply()
 	vim.api.nvim_set_hl(0, "rubyException", { fg = p.keyword })
 	vim.api.nvim_set_hl(0, "rubyPseudoVariable", {})
 	vim.api.nvim_set_hl(0, "rubyRailsUserClass", {})
-	vim.api.nvim_set_hl(0, "rubyRailsARAssociationMethod", { fg = p.rails_method })
-	vim.api.nvim_set_hl(0, "rubyRailsARMethod", { fg = p.rails_method })
-	vim.api.nvim_set_hl(0, "rubyRailsRenderMethod", { fg = p.rails_method })
-	vim.api.nvim_set_hl(0, "rubyRailsMethod", { fg = p.rails_method })
+	-- vim.api.nvim_set_hl(0, "rubyRailsARAssociationMethod", { fg = p.rails_method })
+	-- vim.api.nvim_set_hl(0, "rubyRailsARMethod", { fg = p.rails_method })
+	-- vim.api.nvim_set_hl(0, "rubyRailsRenderMethod", { fg = p.rails_method })
+	-- vim.api.nvim_set_hl(0, "rubyRailsMethod", { fg = p.rails_method })
 
 	-- ERB
 	vim.api.nvim_set_hl(0, "erubyDelimiter", {})
@@ -161,13 +161,24 @@ function M.apply()
 	vim.api.nvim_set_hl(0, "cssBraces", {})
 
 	-- Apply plugin theming
-	pcall(function() require("all-hallows-eve.treesitter").apply() end)
-	pcall(function() require("all-hallows-eve.lualine").apply() end)
-	pcall(function() require("all-hallows-eve.snacks").apply() end)
-	pcall(function() require("all-hallows-eve.todo-comments").apply() end)
-	pcall(function() require("all-hallows-eve.noice").apply() end)
-	pcall(function() require("all-hallows-eve.neotree").apply() end)
+	pcall(function()
+		require("all-hallows-eve.treesitter").apply()
+	end)
+	pcall(function()
+		require("all-hallows-eve.lualine").apply()
+	end)
+	pcall(function()
+		require("all-hallows-eve.snacks").apply()
+	end)
+	pcall(function()
+		require("all-hallows-eve.todo-comments").apply()
+	end)
+	pcall(function()
+		require("all-hallows-eve.noice").apply()
+	end)
+	pcall(function()
+		require("all-hallows-eve.neotree").apply()
+	end)
 end
 
 return M
-
