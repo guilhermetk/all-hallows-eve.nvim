@@ -45,6 +45,12 @@ function M.apply()
   vim.api.nvim_set_hl(0, "@method", { fg = p.red })
   vim.api.nvim_set_hl(0, "@method.call", { fg = p.red })
   vim.api.nvim_set_hl(0, "@constructor", { fg = p.fg1 })
+  
+  -- Additional function-related groups that might be used
+  vim.api.nvim_set_hl(0, "@lsp.type.function", { fg = p.red })
+  vim.api.nvim_set_hl(0, "@lsp.type.method", { fg = p.red })
+  vim.api.nvim_set_hl(0, "Function", { fg = p.red })
+  vim.api.nvim_set_hl(0, "Identifier", { fg = p.red })
 
   -- Variables
   vim.api.nvim_set_hl(0, "@variable", { fg = p.fg1 })
