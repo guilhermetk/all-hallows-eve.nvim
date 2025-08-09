@@ -75,7 +75,6 @@ function M.apply()
 	vim.api.nvim_set_hl(0, "@keyword.exception", { fg = p.keyword })
 	vim.api.nvim_set_hl(0, "@keyword.directive", { fg = p.keyword })
 	vim.api.nvim_set_hl(0, "@keyword.directive.define", { fg = p.keyword })
-	vim.api.nvim_set_hl(0, "@keyword.type", { fg = p.keyword, underline = true })
 
 	-- Operators
 	vim.api.nvim_set_hl(0, "@operator", { fg = p.keyword })
@@ -115,8 +114,8 @@ function M.apply()
 	vim.api.nvim_set_hl(0, "@label", { fg = p.string })
 
 	-- Namespace
-	vim.api.nvim_set_hl(0, "@namespace", { fg = p.fg1, underline = true })
-	vim.api.nvim_set_hl(0, "@module", { fg = p.fg1, underline = true })
+	vim.api.nvim_set_hl(0, "@namespace", { fg = p.fg1 })
+	vim.api.nvim_set_hl(0, "@module", { fg = p.fg1 })
 
 	-- Diff
 	vim.api.nvim_set_hl(0, "@diff.plus", { fg = p.string })
