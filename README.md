@@ -22,7 +22,7 @@ TBD: Screenshots will be added soon.
 
 ```lua
 {
-  "your-username/all-hallows-eve.nvim",
+  "guilhermetk/all-hallows-eve.nvim",
   lazy = false,
   priority = 1000,
   config = function()
