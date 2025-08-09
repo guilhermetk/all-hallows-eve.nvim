@@ -171,6 +171,9 @@ function M.apply()
 	pcall(function()
 		require("all-hallows-eve.neotree").apply()
 	end)
+	pcall(function()
+		require("all-hallows-eve.mason").apply()
+	end)
 end
 
 return M
