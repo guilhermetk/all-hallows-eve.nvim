@@ -59,7 +59,7 @@ function M.apply()
 	vim.api.nvim_set_hl(0, "@field", { fg = p.fg1 })
 
 	-- Types
-	vim.api.nvim_set_hl(0, "@type", { fg = p.fg1 })
+	vim.api.nvim_set_hl(0, "@type", { fg = p.fg1, underline = true })
 	vim.api.nvim_set_hl(0, "@type.builtin", { fg = p.fg1 })
 	vim.api.nvim_set_hl(0, "@type.definition", { fg = p.fg1 })
 	vim.api.nvim_set_hl(0, "@type.qualifier", { fg = p.keyword })
