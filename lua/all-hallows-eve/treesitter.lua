@@ -116,10 +116,10 @@ function M.apply()
 	-- Namespace
 	vim.api.nvim_set_hl(0, "@namespace", { fg = p.fg1 })
 	vim.api.nvim_set_hl(0, "@module", { fg = p.fg1 })
-	vim.api.nvim_set_hl(0, "@module.name", { fg = p.fg1, underline = true })
+	vim.api.nvim_set_hl(0, "@module.definition", { fg = p.fg1, underline = true })
 
 	-- Class
-	vim.api.nvim_set_hl(0, "@class.name", { fg = p.fg1, underline = true })
+	vim.api.nvim_set_hl(0, "@class.definition", { fg = p.fg1, underline = true })
 
 	-- Diff
 	vim.api.nvim_set_hl(0, "@diff.plus", { fg = p.string })
