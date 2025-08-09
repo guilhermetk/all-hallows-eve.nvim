@@ -31,7 +31,6 @@ M.palette = {
 	string = "#66cc33", -- String green
 	constant = "#3387cc", -- Constants/numbers/booleans (blue)
 	regexp = "#cccc33", -- Regular expressions (yellow)
-	rails_method = "#c83730", -- Rails methods (red)
 
 	-- Semantic colors
 	red = "#c83730",
@@ -87,7 +86,7 @@ function M.apply()
 	vim.api.nvim_set_hl(0, "Directory", { fg = p.constant })
 	vim.api.nvim_set_hl(0, "Folded", { fg = p.comment, bg = p.bg3 })
 	vim.api.nvim_set_hl(0, "FoldColumn", { fg = p.fg4, bg = p.bg1 })
-	
+
 	-- Additional UI improvements
 	vim.api.nvim_set_hl(0, "WildMenu", { fg = p.fg1, bg = p.pmenu_sel_bg })
 	vim.api.nvim_set_hl(0, "Question", { fg = p.green })
@@ -95,7 +94,7 @@ function M.apply()
 	vim.api.nvim_set_hl(0, "ModeMsg", { fg = p.fg2 })
 	vim.api.nvim_set_hl(0, "CmdLine", { fg = p.fg1, bg = p.bg1 })
 	vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = p.bg0, bg = p.bg0 })
-	
+
 	-- Ensure terminal colors don't override
 	if vim.fn.has("termguicolors") == 1 then
 		vim.o.termguicolors = true
